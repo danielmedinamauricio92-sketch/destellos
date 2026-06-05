@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b0908;
+  --foreground: #f5e9dc;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(200, 162, 122, 0.08), transparent 34rem),
+    var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: rgba(200, 162, 122, 0.35);
+  color: #fff8ef;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0908;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(200, 162, 122, 0.38);
+  border: 2px solid #0b0908;
+}
