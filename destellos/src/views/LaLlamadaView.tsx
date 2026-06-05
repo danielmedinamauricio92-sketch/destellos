@@ -40,13 +40,16 @@ const blocks: BriefDestelloBlock[] = [
   },
 ];
 
+const subtitle =
+  "Esta es la historia de c\u00f3mo un destello empez\u00f3 a perder su brillo.";
+
 export default function LaLlamadaView() {
   return (
     <BriefDestello
       label="Destello I"
       title="La llamada"
       heroImage="/llamada.png"
-      subtitle="Esta es la historia de c\u00f3mo un destello empez\u00f3 a perder su brillo."
+      subtitle={subtitle}
       blocks={blocks}
     />
   );

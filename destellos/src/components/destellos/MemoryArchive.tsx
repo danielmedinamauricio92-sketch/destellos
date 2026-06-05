@@ -53,9 +53,6 @@ export default function MemoryArchive({ entries }: MemoryArchiveProps) {
 
                   <div className="absolute inset-0 bg-black/35 transition-all duration-500 group-hover:bg-black/20" />
 
-                  <div className="absolute left-4 top-4 border border-[#C8A27A]/25 bg-[#0B0908]/65 px-3 py-2 text-[10px] uppercase tracking-[0.16em] text-[#C8A27A]">
-                    {entry.kind}
-                  </div>
                 </div>
 
                 <div className="flex flex-1 flex-col p-6">

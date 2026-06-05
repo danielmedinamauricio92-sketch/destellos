@@ -23,9 +23,9 @@ export default function ExplorarView() {
           </h1>
 
           <p className="max-w-2xl text-lg leading-8 text-[#DDD0C2]">
-            No todos los recuerdos llegan en orden. Algunos se agrupan por
-            culpa, otros por amor, otros por esa clase de silencio que tarda
-            a\u00f1os en decir algo.
+            {
+              "No todos los recuerdos llegan en orden. Algunos se agrupan por culpa, otros por amor, otros por esa clase de silencio que tarda a\u00f1os en decir algo."
+            }
           </p>
         </motion.div>
 
