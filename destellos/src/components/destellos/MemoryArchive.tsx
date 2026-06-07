@@ -43,8 +43,8 @@ export default function MemoryArchive({ entries }: MemoryArchiveProps) {
             className="h-full"
           >
             <Link href={entry.route} className="block h-full">
-              <article className="group flex h-full flex-col overflow-hidden border border-[#C8A27A]/20 bg-[#151210] transition-all duration-500 hover:border-[#C8A27A]/60">
-                <div className="relative h-64 overflow-hidden">
+              <article className="group flex h-[560px] flex-col overflow-hidden border border-[#C8A27A]/20 bg-[#151210] transition-all duration-500 hover:border-[#C8A27A]/60">
+                <div className="relative h-64 shrink-0 overflow-hidden">
                   <Image
                     src={entry.image}
                     alt={entry.title}
@@ -56,7 +56,7 @@ export default function MemoryArchive({ entries }: MemoryArchiveProps) {
 
                 </div>
 
-                <div className="flex flex-1 flex-col p-6">
+                <div className="flex min-h-0 flex-1 flex-col p-6">
                   <div className="flex items-start justify-between gap-4">
                     <h2 className="text-2xl font-light transition-colors duration-500 group-hover:text-[#C8A27A]">
                       {entry.title}
@@ -67,11 +67,11 @@ export default function MemoryArchive({ entries }: MemoryArchiveProps) {
                     </span>
                   </div>
 
-                  <p className="mt-4 flex-1 leading-7 text-[#DDD0C2]">
+                  <p className="mt-4 line-clamp-4 flex-1 leading-7 text-[#DDD0C2]">
                     {entry.summary}
                   </p>
 
-                  <div className="mt-6 flex flex-wrap gap-2">
+                  <div className="mt-6 flex min-h-10 flex-wrap items-end gap-2">
                     {entry.emotions.map((emotion) => (
                       <span
                         key={emotion}
