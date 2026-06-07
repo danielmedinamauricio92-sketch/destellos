@@ -69,6 +69,17 @@ export const destellos: DestelloEntry[] = [
       "Una madrugada afuera de un hospital, cuando no hab\u00eda nada que hacer salvo quedarse cerca.",
   },
   {
+    id: "casa-casa",
+    title: "Casa, casa",
+    image: "/casa-casa.png",
+    route: "/destello/casa-casa",
+    kind: "longform",
+    status: "published",
+    emotions: ["familia", "amor", "memoria", "tiempo"],
+    summary:
+      "Los v\u00ednculos que nadie sabe nombrar del todo, pero que igual aprenden la forma de una familia.",
+  },
+  {
     id: "el-balcon",
     title: "El balc\u00f3n",
     image: "/balcon.png",
