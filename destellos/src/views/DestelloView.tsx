@@ -22,10 +22,24 @@ const principios = [
   },
 ];
 
+const noEs = [
+  "No es un blog.",
+  "No es poes\u00eda para impresionar.",
+  "No es una colecci\u00f3n de frases lindas.",
+];
+
+const siEs = [
+  "Una forma de mirar algo que qued\u00f3 dando vueltas.",
+  "Un recuerdo contado sin necesidad de cerrarlo todo.",
+  "Una escena peque\u00f1a que todav\u00eda ilumina una parte de la vida.",
+];
+
+const siEsTitle = "S\u00ed es";
+
 export default function DestelloView() {
   return (
     <main className="bg-[#0B0908] text-[#F5E9DC]">
-      <section className="relative flex min-h-[85vh] items-end overflow-hidden px-6 pb-20 pt-32">
+      <section className="relative flex min-h-[86vh] items-end overflow-hidden px-6 pb-20 pt-32">
         <Image
           src="/que-es.png"
           alt={"\u00bfQu\u00e9 es un destello?"}
@@ -47,7 +61,7 @@ export default function DestelloView() {
             Una forma de mirar
           </p>
 
-          <h1 className="max-w-4xl text-5xl font-light tracking-[0.14em] md:text-7xl">
+          <h1 className="max-w-4xl text-5xl font-light tracking-[0.12em] md:text-7xl">
             {"\u00bfQU\u00c9 ES UN DESTELLO?"}
           </h1>
 
@@ -59,7 +73,7 @@ export default function DestelloView() {
       </section>
 
       <section className="px-6 py-24">
-        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-[0.85fr_1.15fr]">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -71,7 +85,9 @@ export default function DestelloView() {
             </p>
             <h2 className="mt-5 text-4xl font-light leading-tight md:text-5xl">
               Destellos no habla desde la herida abierta.
-              <span className="block text-[#C8A27A]">Habla desde la cicatriz.</span>
+              <span className="mt-3 block text-[#C8A27A]">
+                Habla desde la cicatriz.
+              </span>
             </h2>
           </motion.div>
 
@@ -80,16 +96,16 @@ export default function DestelloView() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="space-y-6 text-lg leading-8 text-[#DDD0C2] md:text-xl md:leading-9"
+            className="space-y-7 text-lg leading-8 text-[#DDD0C2] md:text-xl md:leading-9"
           >
             <p>
-              Por eso no busca impresionar. No necesita cerrar todo con una
-              {"ense\u00f1anza ni convertir cada dolor en una frase linda."}
+              {
+                "Por eso no busca impresionar. No necesita cerrar todo con una ense\u00f1anza ni convertir cada dolor en una frase linda."
+              }
             </p>
             <p>
-              A veces alcanza con volver a una escena y mirarla mejor. Una mesa,
               {
-                "un mensaje, una despedida, un silencio que en su momento pareci\u00f3 normal."
+                "A veces alcanza con volver a una escena y mirarla mejor. Una mesa, un mensaje, una despedida, un silencio que en su momento pareci\u00f3 normal."
               }
             </p>
             <p>
@@ -101,29 +117,44 @@ export default function DestelloView() {
       </section>
 
       <section className="border-y border-[#C8A27A]/10 px-6 py-20">
-        <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
-          {principios.map((principio, index) => (
-            <motion.article
-              key={principio.titulo}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.65, delay: index * 0.08 }}
-              className="border border-[#C8A27A]/15 bg-[#151210]/70 p-6"
-            >
-              <p className="mb-8 text-sm text-[#C8A27A]/80">
-                {String(index + 1).padStart(2, "0")}
-              </p>
-              <h3 className="text-2xl font-light text-[#F5E9DC]">
-                {principio.titulo}
-              </h3>
-              <p className="mt-5 leading-7 text-[#DDD0C2]">{principio.texto}</p>
-            </motion.article>
-          ))}
+        <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2">
+          <DefinitionColumn title="No es" items={noEs} />
+          <DefinitionColumn title={siEsTitle} items={siEs} highlighted />
         </div>
       </section>
 
-      <section className="px-6 py-24 text-center">
+      <section className="px-6 py-24">
+        <div className="mx-auto max-w-6xl">
+          <p className="mb-10 text-sm uppercase tracking-[0.25em] text-[#C8A27A]">
+            Principios
+          </p>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            {principios.map((principio, index) => (
+              <motion.article
+                key={principio.titulo}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.65, delay: index * 0.08 }}
+                className="border border-[#C8A27A]/15 bg-[#151210]/70 p-7"
+              >
+                <p className="mb-10 text-sm text-[#C8A27A]/80">
+                  {String(index + 1).padStart(2, "0")}
+                </p>
+                <h3 className="text-2xl font-light text-[#F5E9DC]">
+                  {principio.titulo}
+                </h3>
+                <p className="mt-5 leading-7 text-[#DDD0C2]">
+                  {principio.texto}
+                </p>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-[#C8A27A]/10 px-6 py-24 text-center">
         <p className="mx-auto max-w-3xl text-3xl font-light leading-relaxed text-[#C8A27A] md:text-5xl">
           {"Algunas cosas no vuelven. Pero a veces todav\u00eda iluminan un poco."}
         </p>
@@ -136,5 +167,40 @@ export default function DestelloView() {
         </Link>
       </section>
     </main>
+  );
+}
+
+function DefinitionColumn({
+  title,
+  items,
+  highlighted = false,
+}: {
+  title: string;
+  items: string[];
+  highlighted?: boolean;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.7 }}
+      className={`border p-7 ${
+        highlighted
+          ? "border-[#C8A27A]/30 bg-[#1A1512]"
+          : "border-[#C8A27A]/10 bg-[#11100F]"
+      }`}
+    >
+      <h3 className="text-sm uppercase tracking-[0.25em] text-[#C8A27A]">
+        {title}
+      </h3>
+      <div className="mt-8 space-y-5">
+        {items.map((item) => (
+          <p key={item} className="text-xl leading-8 text-[#DDD0C2]">
+            {item}
+          </p>
+        ))}
+      </div>
+    </motion.div>
   );
 }
