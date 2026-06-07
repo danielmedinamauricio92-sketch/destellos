@@ -30,7 +30,7 @@ export default function MemoryArchive({ entries }: MemoryArchiveProps) {
         ))}
       </div>
 
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid auto-rows-fr gap-8 md:grid-cols-2 lg:grid-cols-3">
         {entries.map((entry, index) => (
           <motion.div
             key={entry.id}
@@ -40,8 +40,9 @@ export default function MemoryArchive({ entries }: MemoryArchiveProps) {
               delay: index * 0.06,
               duration: 0.6,
             }}
+            className="h-full"
           >
-            <Link href={entry.route} className="block">
+            <Link href={entry.route} className="block h-full">
               <article className="group flex h-full flex-col overflow-hidden border border-[#C8A27A]/20 bg-[#151210] transition-all duration-500 hover:border-[#C8A27A]/60">
                 <div className="relative h-64 overflow-hidden">
                   <Image
