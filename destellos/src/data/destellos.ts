@@ -80,6 +80,17 @@ export const destellos: DestelloEntry[] = [
       "Los v\u00ednculos que nadie sabe nombrar del todo, pero que igual aprenden la forma de una familia.",
   },
   {
+    id: "dame-unos-dias",
+    title: "Dame unos d\u00edas",
+    image: "/dame-unos-dias.png",
+    route: "/destello/dame-unos-dias",
+    kind: "longform",
+    status: "published",
+    emotions: ["amor", "culpa", "memoria", "tiempo", "silencio"],
+    summary:
+      "La noche en que una decisi\u00f3n firme empez\u00f3 a caerse en un parque enorme.",
+  },
+  {
     id: "el-balcon",
     title: "El balc\u00f3n",
     image: "/balcon.png",
