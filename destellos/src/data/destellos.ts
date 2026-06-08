@@ -112,13 +112,14 @@ export const destellos: DestelloEntry[] = [
   },
   {
     id: "el-tatuaje",
-    title: "El tatuaje",
-    image: "/tatuaje.png",
+    title: "La marca",
+    image: "/la-marca.png",
     route: "/destello/el-tatuaje",
-    kind: "placeholder",
-    status: "seed",
-    emotions: ["memoria", "tiempo"],
-    summary: "Algo que queda en el cuerpo cuando la vida ya cambi\u00f3 de forma.",
+    kind: "longform",
+    status: "published",
+    emotions: ["amor", "culpa", "memoria", "tiempo", "cuerpo"],
+    summary:
+      "Una promesa escrita en la piel, un pato, y las marcas que cambiaron de idioma con los a\u00f1os.",
   },
   {
     id: "la-despedida",
