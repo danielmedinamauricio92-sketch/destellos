@@ -55,7 +55,7 @@ export const destellos: DestelloEntry[] = [
     status: "published",
     emotions: ["perdida", "familia", "silencio"],
     summary:
-      "Una llamada que no solo trae una noticia. Tambi\u00e9n cambia la forma de recordar todo lo anterior.",
+      "Una llamada que llega con planes, miedo y una decisi\u00f3n empujada por demasiadas voces.",
   },
   {
     id: "frente-al-hospital",
