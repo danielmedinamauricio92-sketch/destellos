@@ -13,7 +13,7 @@ const fragments = [
   {
     title: "El pato",
     text:
-      "No era solo tu nombre. También estaba ese pato, una broma familiar, una forma pequeña y absurda de decir que todavía existíamos.",
+      "No era solo mi nombre. También estaba ese pato, una broma familiar, una forma pequeña y absurda de decir que todavía existíamos.",
   },
   {
     title: "La mancha",
@@ -83,7 +83,7 @@ export default function LaMarcaView() {
               respondía lo mismo: no te animás.
             </p>
             <p>
-              Hasta que una noche llegó una foto. Tu nombre escrito en el pecho
+              Hasta que una noche llegó una foto. Mi nombre escrito en el pecho
               y, al lado, un pato. En ese momento parecía una forma rara y
               hermosa de decir todavía.
             </p>
@@ -133,8 +133,8 @@ export default function LaMarcaView() {
             </p>
             <p>
               Entonces apareció esa foto. Mi nombre en tu pecho y un pato al
-              lado. El pato no era un detalle menor: a Alma, al bebé y a mí nos
-              gustaban los patos. A mí también me gustaba pelear con los gansos,
+              lado. El pato no era un detalle menor: a ella de chiquita y a mí
+              nos gustaban los patos. A mí también me gustaba pelear con los gansos,
               que es una forma bastante ridícula de guardar ternura.
             </p>
             <p>
