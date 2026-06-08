@@ -55,7 +55,7 @@ export const destellos: DestelloEntry[] = [
     status: "published",
     emotions: ["perdida", "familia", "silencio"],
     summary:
-      "Una llamada que no solo trae una noticia. Tambi\u00e9n cambia la forma de recordar todo lo anterior.",
+      "Una llamada que llega con planes, miedo y una decisi\u00f3n empujada por demasiadas voces.",
   },
   {
     id: "frente-al-hospital",
@@ -67,6 +67,28 @@ export const destellos: DestelloEntry[] = [
     emotions: ["perdida", "culpa", "cuerpo", "silencio"],
     summary:
       "Una madrugada afuera de un hospital, cuando no hab\u00eda nada que hacer salvo quedarse cerca.",
+  },
+  {
+    id: "casa-casa",
+    title: "Casa, casa",
+    image: "/casa-casa.png",
+    route: "/destello/casa-casa",
+    kind: "longform",
+    status: "published",
+    emotions: ["familia", "amor", "memoria", "tiempo"],
+    summary:
+      "Los v\u00ednculos que nadie sabe nombrar del todo, pero que igual aprenden la forma de una familia.",
+  },
+  {
+    id: "dame-unos-dias",
+    title: "Dame unos d\u00edas",
+    image: "/dame-unos-dias.png",
+    route: "/destello/dame-unos-dias",
+    kind: "longform",
+    status: "published",
+    emotions: ["amor", "culpa", "memoria", "tiempo", "silencio"],
+    summary:
+      "La noche en que una decisi\u00f3n firme empez\u00f3 a caerse en un parque enorme.",
   },
   {
     id: "el-balcon",
@@ -90,13 +112,14 @@ export const destellos: DestelloEntry[] = [
   },
   {
     id: "el-tatuaje",
-    title: "El tatuaje",
-    image: "/tatuaje.png",
+    title: "La marca",
+    image: "/la-marca.png",
     route: "/destello/el-tatuaje",
-    kind: "placeholder",
-    status: "seed",
-    emotions: ["memoria", "tiempo"],
-    summary: "Algo que queda en el cuerpo cuando la vida ya cambi\u00f3 de forma.",
+    kind: "longform",
+    status: "published",
+    emotions: ["amor", "culpa", "memoria", "tiempo", "cuerpo"],
+    summary:
+      "Una promesa escrita en la piel, un pato, y las marcas que cambiaron de idioma con los a\u00f1os.",
   },
   {
     id: "la-despedida",

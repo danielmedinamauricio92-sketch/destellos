@@ -4,42 +4,42 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const fragments = [
+const escenas = [
   {
-    title: "Los planes",
+    title: "Pato",
     text:
-      "Durante días hablamos de un futuro que todavía no existía. Nombres, horarios, formas de cuidarlos, una vida armada con palabras antes de tener paredes donde apoyarla.",
+      "Un sándwich de milanesa, una comida de salubridad dudosa y una mano chiquita tirando de la ropa para pedir un bocado.",
   },
   {
-    title: "El alrededor",
+    title: "Las llaves",
     text:
-      "Ella venía de una vida recién ordenada por otros: una casa, una familia, un esposo, decisiones tomadas con demasiada gente mirando.",
+      "La puerta cerrada como juego. Ella apenas caminando, buscando la llave para no dejarte afuera.",
   },
   {
-    title: "La presión",
+    title: "La tarjeta",
     text:
-      "En el medio apareció un embarazo. Y alrededor de esa noticia empezaron a moverse opiniones, miedos y obligaciones que no siempre llevaban su voz en el centro.",
+      "La máquina de peluches se quedó sin efectivo. Ella ya había entendido que en la billetera todavía quedaba otra respuesta.",
   },
   {
-    title: "La frase",
+    title: "El abrazo",
     text:
-      "Después llamó. No hizo falta demasiado. A veces una noticia entra completa en tres palabras.",
+      "Una tarde en casa de tus viejos, subida encima tuyo, abrazada como si soltar tambien fuera perder algo.",
   },
 ];
 
-export default function LaLlamadaView() {
+export default function CasaCasaView() {
   return (
     <main className="bg-[#0B0908] text-[#F5E9DC]">
       <section className="relative flex min-h-screen items-end overflow-hidden px-6 pb-20 pt-32">
         <Image
-          src="/llamada.png"
-          alt="Un teléfono en la noche"
+          src="/casa-casa.png"
+          alt="Una puerta de casa con llaves y un juguete"
           fill
           priority
           className="object-cover"
         />
 
-        <div className="absolute inset-0 bg-black/72" />
+        <div className="absolute inset-0 bg-black/65" />
         <div className="absolute inset-0 bg-linear-to-t from-[#0B0908] via-[#0B0908]/35 to-transparent" />
 
         <motion.div
@@ -49,18 +49,18 @@ export default function LaLlamadaView() {
           className="relative z-10 mx-auto w-full max-w-6xl"
         >
           <p className="mb-6 text-sm uppercase tracking-[0.3em] text-[#C8A27A]">
-            Destello I
+            Destello IV
           </p>
 
-          <h1 className="max-w-4xl text-5xl font-light uppercase tracking-[0.16em] md:text-8xl">
-            La llamada
+          <h1 className="max-w-4xl text-5xl font-light uppercase tracking-[0.14em] md:text-7xl">
+            Casa, casa
           </h1>
 
           <div className="mt-8 h-px w-20 bg-[#C8A27A]/40" />
 
           <p className="mt-8 max-w-2xl text-xl leading-relaxed text-[#DDD0C2] md:text-2xl">
-            Una noticia que no llegó sola. Venía con planes, miedo, familia y
-            una decisión que otros también empujaban.
+            Hay vínculos que nadie sabe nombrar del todo, pero que igual
+            aprenden la forma de una familia.
           </p>
         </motion.div>
       </section>
@@ -74,19 +74,18 @@ export default function LaLlamadaView() {
           className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[220px_1fr]"
         >
           <p className="text-sm uppercase tracking-[0.25em] text-[#C8A27A]">
-            Cerca de otra noche
+            La frase
           </p>
 
           <div className="max-w-3xl space-y-6 text-xl leading-9 text-[#DDD0C2] md:text-2xl md:leading-10">
             <p>
-              Esta historia vive cerca de la noche de <em>Dame unos días</em>.
-              No la explica del todo, pero deja ver una parte del mismo
-              desorden.
+              Ella no decía casa una sola vez. Decía casa, casa, como si
+              repitiéndolo pudiera encontrar la puerta correcta.
             </p>
             <p>
-              Para ese entonces ella ya estaba casada. Y aun así, entre los dos
-              se había abierto una conversación imposible sobre un futuro que no
-              sabía dónde entrar.
+              Yo la tenía en brazos y no sabía cómo explicarle que ese lugar ya
+              no estaba. Que los adultos a veces rompen cosas que los chicos
+              todavía siguen buscando.
             </p>
           </div>
         </motion.div>
@@ -102,12 +101,12 @@ export default function LaLlamadaView() {
             className="lg:sticky lg:top-28 lg:self-start"
           >
             <p className="text-sm uppercase tracking-[0.25em] text-[#C8A27A]">
-              El peso
+              El lugar
             </p>
             <h2 className="mt-5 text-4xl font-light leading-tight md:text-5xl">
-              No era solo perder algo.
+              No era una familia prolija.
               <span className="mt-3 block text-[#C8A27A]">
-                Era perder lo que ya habíamos empezado a imaginar.
+                Pero fue familia igual.
               </span>
             </h2>
           </motion.div>
@@ -120,29 +119,27 @@ export default function LaLlamadaView() {
             className="space-y-7 text-lg leading-8 text-[#E8D8C8] md:text-xl md:leading-9"
           >
             <p>
-              Durante días hablamos como hablan las personas que todavía no
-              saben si están haciendo planes o pidiendo permiso para creer en
-              ellos. Había nombres posibles. Había horarios. Había ideas
-              torpes, hermosas, sobre cómo cuidar una vida que todavía era más
-              pregunta que certeza.
+              Yo venía de otra vida. De salir, de ir a bailar, de no pensar
+              demasiado lejos. Y de golpe me encontré pasando de ser un pibe de
+              veintipico a entender que había una casa esperándome.
             </p>
             <p>
-              Todo pasaba en un momento raro. Ella llevaba poco tiempo casada y
-              alrededor suyo había una familia intentando decidir qué era lo
-              correcto, qué convenía, qué debía hacerse. Como si una noticia así
-              pudiera resolverse entre voces ajenas.
+              No fue algo que alguien nombrara con papeles ni con palabras
+              grandes. Pasó de a poco. En comidas tarde, en puertas cerradas de
+              mentira, en juguetes elegidos con una seriedad imposible, en tus
+              viejos convertidos en abuelos sin que nadie supiera bien cuándo.
             </p>
             <p>
-              Yo no estaba en el centro de esa casa. Tampoco tenía un lugar
-              claro desde donde hablar. Pero igual estaba. Del otro lado del
-              teléfono, de los mensajes, de las promesas de que de alguna forma
-              íbamos a poder con eso.
+              Algunas escenas vuelven sin pedir permiso. No porque hayan sido
+              enormes, sino porque tuvieron esa manera rara de quedarse. Una
+              mano chiquita pidiendo un pedazo de sándwich. Una llave alcanzada
+              desde el otro lado del juego. Una cartera de dinosaurio llena de
+              armas y autos.
             </p>
             <p>
-              Después empezaron las peleas, las súplicas, las frases dichas con
-              miedo. No recuerdo el orden exacto. Recuerdo la sensación de estar
-              intentando sostener algo que se nos iba de las manos mientras
-              todos alrededor empujaban hacia una decisión.
+              Después, cuando todo se rompió por primera vez, ella volvió a
+              verte y pidió volver a casa, casa. Y ahí no había explicación que
+              alcanzara.
             </p>
           </motion.article>
         </div>
@@ -151,13 +148,13 @@ export default function LaLlamadaView() {
       <section className="border-y border-[#C8A27A]/10 px-6 py-20">
         <div className="mx-auto max-w-6xl">
           <p className="mb-10 text-sm uppercase tracking-[0.25em] text-[#C8A27A]">
-            Fragmentos
+            Escenas
           </p>
 
           <div className="grid gap-6 md:grid-cols-2">
-            {fragments.map((fragment, index) => (
+            {escenas.map((escena, index) => (
               <motion.article
-                key={fragment.title}
+                key={escena.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -168,11 +165,9 @@ export default function LaLlamadaView() {
                   {String(index + 1).padStart(2, "0")}
                 </p>
                 <h3 className="text-2xl font-light text-[#F5E9DC]">
-                  {fragment.title}
+                  {escena.title}
                 </h3>
-                <p className="mt-5 leading-7 text-[#DDD0C2]">
-                  {fragment.text}
-                </p>
+                <p className="mt-5 leading-7 text-[#DDD0C2]">{escena.text}</p>
               </motion.article>
             ))}
           </div>
@@ -188,32 +183,19 @@ export default function LaLlamadaView() {
           className="mx-auto max-w-3xl text-center"
         >
           <p className="text-3xl font-light leading-relaxed text-[#C8A27A] md:text-5xl">
-            “Ya no está.”
+            A veces también se extraña lo que nunca fue del todo propio.
           </p>
           <p className="mt-8 text-xl leading-8 text-[#DDD0C2]">
-            No recuerdo cuánto tiempo pasó después de escuchar eso. Recuerdo
-            prender un cigarrillo, volver a casa y encerrarme en la habitación
-            de mis padres.
-          </p>
-          <p className="mt-6 text-lg leading-8 text-[#DDD0C2]">
-            Creo que fue la primera vez que nuestro destello empezó a perder un
-            poco de su brillo.
+            Y tal vez por eso duele distinto. Porque no hay un nombre exacto
+            para ese lugar, pero sí hay memoria.
           </p>
 
-          <div className="mt-12 flex flex-wrap justify-center gap-4">
-            <Link
-              href="/destello/dame-unos-dias"
-              className="inline-block border border-[#C8A27A]/40 px-7 py-4 text-sm uppercase tracking-[0.18em] text-[#F5E9DC] transition-all duration-500 hover:bg-[#C8A27A] hover:text-black"
-            >
-              Leer Dame unos días
-            </Link>
-            <Link
-              href="/explorar"
-              className="inline-block border border-[#C8A27A]/20 px-7 py-4 text-sm uppercase tracking-[0.18em] text-[#DDD0C2] transition-all duration-500 hover:border-[#C8A27A]/50 hover:text-[#F5E9DC]"
-            >
-              Volver a explorar
-            </Link>
-          </div>
+          <Link
+            href="/explorar"
+            className="mt-12 inline-block border border-[#C8A27A]/40 px-7 py-4 text-sm uppercase tracking-[0.18em] text-[#F5E9DC] transition-all duration-500 hover:bg-[#C8A27A] hover:text-black"
+          >
+            Volver a explorar
+          </Link>
         </motion.div>
       </section>
     </main>

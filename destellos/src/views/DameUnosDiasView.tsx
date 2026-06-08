@@ -6,40 +6,40 @@ import { motion } from "framer-motion";
 
 const fragments = [
   {
-    title: "Los planes",
+    title: "La decisión",
     text:
-      "Durante días hablamos de un futuro que todavía no existía. Nombres, horarios, formas de cuidarlos, una vida armada con palabras antes de tener paredes donde apoyarla.",
+      "Hasta ese momento, irme parecía posible. Dolía, sí, pero tenía una forma. Era una decisión cansada, repetida, casi tranquila.",
   },
   {
-    title: "El alrededor",
+    title: "Los mensajes",
     text:
-      "Ella venía de una vida recién ordenada por otros: una casa, una familia, un esposo, decisiones tomadas con demasiada gente mirando.",
+      "El teléfono empezó a sonar varias veces. Al principio no contesté. Hay silencios que uno usa para convencerse de que todavía manda sobre algo.",
   },
   {
-    title: "La presión",
+    title: "El parque",
     text:
-      "En el medio apareció un embarazo. Y alrededor de esa noticia empezaron a moverse opiniones, miedos y obligaciones que no siempre llevaban su voz en el centro.",
+      "La batería se apagaba, el parque era enorme y no sabíamos si íbamos a volver a encontrarnos. Después te vi a lo lejos.",
   },
   {
-    title: "La frase",
+    title: "La promesa",
     text:
-      "Después llamó. No hizo falta demasiado. A veces una noticia entra completa en tres palabras.",
+      "Dijiste: dame unos días. No sonó a explicación. Sonó a alguien intentando sostener el mundo con las manos.",
   },
 ];
 
-export default function LaLlamadaView() {
+export default function DameUnosDiasView() {
   return (
     <main className="bg-[#0B0908] text-[#F5E9DC]">
       <section className="relative flex min-h-screen items-end overflow-hidden px-6 pb-20 pt-32">
         <Image
-          src="/llamada.png"
-          alt="Un teléfono en la noche"
+          src="/dame-unos-dias.png"
+          alt="Un parque de noche bajo la lluvia con un teléfono sobre un banco"
           fill
           priority
           className="object-cover"
         />
 
-        <div className="absolute inset-0 bg-black/72" />
+        <div className="absolute inset-0 bg-black/70" />
         <div className="absolute inset-0 bg-linear-to-t from-[#0B0908] via-[#0B0908]/35 to-transparent" />
 
         <motion.div
@@ -49,18 +49,18 @@ export default function LaLlamadaView() {
           className="relative z-10 mx-auto w-full max-w-6xl"
         >
           <p className="mb-6 text-sm uppercase tracking-[0.3em] text-[#C8A27A]">
-            Destello I
+            Destello V
           </p>
 
-          <h1 className="max-w-4xl text-5xl font-light uppercase tracking-[0.16em] md:text-8xl">
-            La llamada
+          <h1 className="max-w-4xl text-5xl font-light uppercase tracking-[0.13em] md:text-7xl">
+            Dame unos días
           </h1>
 
           <div className="mt-8 h-px w-20 bg-[#C8A27A]/40" />
 
           <p className="mt-8 max-w-2xl text-xl leading-relaxed text-[#DDD0C2] md:text-2xl">
-            Una noticia que no llegó sola. Venía con planes, miedo, familia y
-            una decisión que otros también empujaban.
+            Una noche en la que una decisión parecía firme, hasta que alguien
+            apareció caminando desde el fondo del parque.
           </p>
         </motion.div>
       </section>
@@ -74,26 +74,23 @@ export default function LaLlamadaView() {
           className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[220px_1fr]"
         >
           <p className="text-sm uppercase tracking-[0.25em] text-[#C8A27A]">
-            Cerca de otra noche
+            La caída
           </p>
 
           <div className="max-w-3xl space-y-6 text-xl leading-9 text-[#DDD0C2] md:text-2xl md:leading-10">
             <p>
-              Esta historia vive cerca de la noche de <em>Dame unos días</em>.
-              No la explica del todo, pero deja ver una parte del mismo
-              desorden.
+              Mientras eras mensajes, yo todavía podía sostener mi decisión.
             </p>
             <p>
-              Para ese entonces ella ya estaba casada. Y aun así, entre los dos
-              se había abierto una conversación imposible sobre un futuro que no
-              sabía dónde entrar.
+              Se empezó a caer cuando dijiste que venías. Terminó de caer
+              cuando te vi a lo lejos.
             </p>
           </div>
         </motion.div>
       </section>
 
       <section className="px-6 py-24">
-        <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-[0.95fr_1.05fr]">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -102,12 +99,12 @@ export default function LaLlamadaView() {
             className="lg:sticky lg:top-28 lg:self-start"
           >
             <p className="text-sm uppercase tracking-[0.25em] text-[#C8A27A]">
-              El peso
+              Esa noche
             </p>
             <h2 className="mt-5 text-4xl font-light leading-tight md:text-5xl">
-              No era solo perder algo.
+              No volviste para explicarlo todo.
               <span className="mt-3 block text-[#C8A27A]">
-                Era perder lo que ya habíamos empezado a imaginar.
+                Volviste para desordenarlo.
               </span>
             </h2>
           </motion.div>
@@ -120,29 +117,35 @@ export default function LaLlamadaView() {
             className="space-y-7 text-lg leading-8 text-[#E8D8C8] md:text-xl md:leading-9"
           >
             <p>
-              Durante días hablamos como hablan las personas que todavía no
-              saben si están haciendo planes o pidiendo permiso para creer en
-              ellos. Había nombres posibles. Había horarios. Había ideas
-              torpes, hermosas, sobre cómo cuidar una vida que todavía era más
-              pregunta que certeza.
+              Estaba en la casa de un amigo, quejándome de mi mal de amores
+              como quien repite algo para terminar de creérselo. Hablamos de
+              pavadas, del trabajo, de la vida. Afuera la noche estaba fresca y
+              yo, por primera vez en mucho tiempo, creía saber qué tenía que
+              hacer.
             </p>
             <p>
-              Todo pasaba en un momento raro. Ella llevaba poco tiempo casada y
-              alrededor suyo había una familia intentando decidir qué era lo
-              correcto, qué convenía, qué debía hacerse. Como si una noticia así
-              pudiera resolverse entre voces ajenas.
+              Los mensajes empezaron a llegar y decidí no contestar. No por
+              orgullo, o no solamente por eso. También porque responder era
+              volver a entrar en una habitación de la que yo estaba intentando
+              salir.
             </p>
             <p>
-              Yo no estaba en el centro de esa casa. Tampoco tenía un lugar
-              claro desde donde hablar. Pero igual estaba. Del otro lado del
-              teléfono, de los mensajes, de las promesas de que de alguna forma
-              íbamos a poder con eso.
+              Después preguntaste dónde estaba. Te contesté casi sin darle
+              importancia, y entonces dijiste que ibas a verme. Que te buscara
+              en un lugar.
             </p>
             <p>
-              Después empezaron las peleas, las súplicas, las frases dichas con
-              miedo. No recuerdo el orden exacto. Recuerdo la sensación de estar
-              intentando sostener algo que se nos iba de las manos mientras
-              todos alrededor empujaban hacia una decisión.
+              Pasaron horas. El teléfono se quedaba sin batería. El parque era
+              demasiado grande para una noche así. Mi amigo me acompañó hasta
+              que apareciste, y cuando te vi a lo lejos entendí que una cosa era
+              decidir irme de una historia y otra muy distinta era verte venir
+              hacia mí.
+            </p>
+            <p>
+              Caminamos. Yo quería entenderte, justificar algo, encontrar una
+              forma menos absurda de todo lo que había pasado. Pero nada estaba
+              claro. Solo estaba esa promesa tuya, firme y pequeña: dame unos
+              días, voy a arreglarlo todo.
             </p>
           </motion.article>
         </div>
@@ -151,7 +154,7 @@ export default function LaLlamadaView() {
       <section className="border-y border-[#C8A27A]/10 px-6 py-20">
         <div className="mx-auto max-w-6xl">
           <p className="mb-10 text-sm uppercase tracking-[0.25em] text-[#C8A27A]">
-            Fragmentos
+            Lo que quedó
           </p>
 
           <div className="grid gap-6 md:grid-cols-2">
@@ -188,32 +191,24 @@ export default function LaLlamadaView() {
           className="mx-auto max-w-3xl text-center"
         >
           <p className="text-3xl font-light leading-relaxed text-[#C8A27A] md:text-5xl">
-            “Ya no está.”
+            Después no arreglaste todo.
           </p>
           <p className="mt-8 text-xl leading-8 text-[#DDD0C2]">
-            No recuerdo cuánto tiempo pasó después de escuchar eso. Recuerdo
-            prender un cigarrillo, volver a casa y encerrarme en la habitación
-            de mis padres.
+            Hiciste algo más extraño: pusiste las piezas de cabeza y confiaste
+            en que íbamos a encontrar la forma de salir juntos de ese desorden.
           </p>
           <p className="mt-6 text-lg leading-8 text-[#DDD0C2]">
-            Creo que fue la primera vez que nuestro destello empezó a perder un
-            poco de su brillo.
+            Lo demás ya pertenecía a una vida que otros habían intentado ordenar
+            por vos. Una casa, una familia, un esposo, decisiones tomadas
+            alrededor de tu cuerpo y de tu futuro.
           </p>
 
-          <div className="mt-12 flex flex-wrap justify-center gap-4">
-            <Link
-              href="/destello/dame-unos-dias"
-              className="inline-block border border-[#C8A27A]/40 px-7 py-4 text-sm uppercase tracking-[0.18em] text-[#F5E9DC] transition-all duration-500 hover:bg-[#C8A27A] hover:text-black"
-            >
-              Leer Dame unos días
-            </Link>
-            <Link
-              href="/explorar"
-              className="inline-block border border-[#C8A27A]/20 px-7 py-4 text-sm uppercase tracking-[0.18em] text-[#DDD0C2] transition-all duration-500 hover:border-[#C8A27A]/50 hover:text-[#F5E9DC]"
-            >
-              Volver a explorar
-            </Link>
-          </div>
+          <Link
+            href="/explorar"
+            className="mt-12 inline-block border border-[#C8A27A]/40 px-7 py-4 text-sm uppercase tracking-[0.18em] text-[#F5E9DC] transition-all duration-500 hover:bg-[#C8A27A] hover:text-black"
+          >
+            Volver a explorar
+          </Link>
         </motion.div>
       </section>
     </main>

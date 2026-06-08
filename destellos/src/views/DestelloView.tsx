@@ -42,7 +42,7 @@ export default function DestelloView() {
       <section className="relative flex min-h-[86vh] items-end overflow-hidden px-6 pb-20 pt-32">
         <Image
           src="/que-es.png"
-          alt={"\u00bfQu\u00e9 es un destello?"}
+          alt="La voz de Destellos"
           fill
           priority
           className="object-cover"
@@ -62,7 +62,7 @@ export default function DestelloView() {
           </p>
 
           <h1 className="max-w-4xl text-5xl font-light tracking-[0.12em] md:text-7xl">
-            {"\u00bfQU\u00c9 ES UN DESTELLO?"}
+            La voz
           </h1>
 
           <p className="mt-8 max-w-2xl text-xl leading-relaxed text-[#DDD0C2] md:text-2xl">

@@ -22,7 +22,7 @@ export default function Navbar() {
             href="/destello"
             className="text-sm uppercase tracking-[0.15em] text-[#DDD0C2] transition hover:text-[#C8A27A]"
           >
-            {"\u00bfQu\u00e9 es?"}
+            La voz
           </Link>
         </nav>
       </div>

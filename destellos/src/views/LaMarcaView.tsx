@@ -6,41 +6,41 @@ import { motion } from "framer-motion";
 
 const fragments = [
   {
-    title: "Los planes",
+    title: "Reconciliación",
     text:
-      "Durante días hablamos de un futuro que todavía no existía. Nombres, horarios, formas de cuidarlos, una vida armada con palabras antes de tener paredes donde apoyarla.",
+      "Hablábamos en serio de cambiar, de escucharnos más, de entender cómo era posible querernos tanto y aun así no funcionar.",
   },
   {
-    title: "El alrededor",
+    title: "El pato",
     text:
-      "Ella venía de una vida recién ordenada por otros: una casa, una familia, un esposo, decisiones tomadas con demasiada gente mirando.",
+      "No era solo mi nombre. También estaba ese pato, una broma familiar, una forma pequeña y absurda de decir que todavía existíamos.",
   },
   {
-    title: "La presión",
+    title: "La mancha",
     text:
-      "En el medio apareció un embarazo. Y alrededor de esa noticia empezaron a moverse opiniones, miedos y obligaciones que no siempre llevaban su voz en el centro.",
+      "Años después me mostraste cómo lo habías tapado. Lo que había sido promesa ahora era algo que necesitabas cubrir.",
   },
   {
-    title: "La frase",
+    title: "El nombre",
     text:
-      "Después llamó. No hizo falta demasiado. A veces una noticia entra completa en tres palabras.",
+      "Mucho tiempo después apareció una palabra para una parte del caos. Ayudó a mirar, pero no convirtió la historia en diagnóstico.",
   },
 ];
 
-export default function LaLlamadaView() {
+export default function LaMarcaView() {
   return (
     <main className="bg-[#0B0908] text-[#F5E9DC]">
       <section className="relative flex min-h-screen items-end overflow-hidden px-6 pb-20 pt-32">
         <Image
-          src="/llamada.png"
-          alt="Un teléfono en la noche"
+          src="/la-marca.png"
+          alt="Una marca de tinta cubierta junto a un pequeño pato"
           fill
           priority
           className="object-cover"
         />
 
-        <div className="absolute inset-0 bg-black/72" />
-        <div className="absolute inset-0 bg-linear-to-t from-[#0B0908] via-[#0B0908]/35 to-transparent" />
+        <div className="absolute inset-0 bg-black/68" />
+        <div className="absolute inset-0 bg-linear-to-t from-[#0B0908] via-[#0B0908]/38 to-transparent" />
 
         <motion.div
           initial={{ opacity: 0, y: 28 }}
@@ -49,18 +49,18 @@ export default function LaLlamadaView() {
           className="relative z-10 mx-auto w-full max-w-6xl"
         >
           <p className="mb-6 text-sm uppercase tracking-[0.3em] text-[#C8A27A]">
-            Destello I
+            Destello VI
           </p>
 
-          <h1 className="max-w-4xl text-5xl font-light uppercase tracking-[0.16em] md:text-8xl">
-            La llamada
+          <h1 className="max-w-4xl text-5xl font-light uppercase tracking-[0.14em] md:text-7xl">
+            La marca
           </h1>
 
           <div className="mt-8 h-px w-20 bg-[#C8A27A]/40" />
 
           <p className="mt-8 max-w-2xl text-xl leading-relaxed text-[#DDD0C2] md:text-2xl">
-            Una noticia que no llegó sola. Venía con planes, miedo, familia y
-            una decisión que otros también empujaban.
+            Hay marcas que nacen como promesa y con los años aprenden otro
+            idioma.
           </p>
         </motion.div>
       </section>
@@ -74,19 +74,18 @@ export default function LaLlamadaView() {
           className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[220px_1fr]"
         >
           <p className="text-sm uppercase tracking-[0.25em] text-[#C8A27A]">
-            Cerca de otra noche
+            La promesa
           </p>
 
           <div className="max-w-3xl space-y-6 text-xl leading-9 text-[#DDD0C2] md:text-2xl md:leading-10">
             <p>
-              Esta historia vive cerca de la noche de <em>Dame unos días</em>.
-              No la explica del todo, pero deja ver una parte del mismo
-              desorden.
+              Bromeaste durante días con tatuarte mi nombre. Yo siempre te
+              respondía lo mismo: no te animás.
             </p>
             <p>
-              Para ese entonces ella ya estaba casada. Y aun así, entre los dos
-              se había abierto una conversación imposible sobre un futuro que no
-              sabía dónde entrar.
+              Hasta que una noche llegó una foto. Mi nombre escrito en el pecho
+              y, al lado, un pato. En ese momento parecía una forma rara y
+              hermosa de decir todavía.
             </p>
           </div>
         </motion.div>
@@ -102,12 +101,12 @@ export default function LaLlamadaView() {
             className="lg:sticky lg:top-28 lg:self-start"
           >
             <p className="text-sm uppercase tracking-[0.25em] text-[#C8A27A]">
-              El peso
+              El cuerpo
             </p>
             <h2 className="mt-5 text-4xl font-light leading-tight md:text-5xl">
-              No era solo perder algo.
+              No todo lo que queda en la piel
               <span className="mt-3 block text-[#C8A27A]">
-                Era perder lo que ya habíamos empezado a imaginar.
+                sabe explicar por qué quedó.
               </span>
             </h2>
           </motion.div>
@@ -120,29 +119,28 @@ export default function LaLlamadaView() {
             className="space-y-7 text-lg leading-8 text-[#E8D8C8] md:text-xl md:leading-9"
           >
             <p>
-              Durante días hablamos como hablan las personas que todavía no
-              saben si están haciendo planes o pidiendo permiso para creer en
-              ellos. Había nombres posibles. Había horarios. Había ideas
-              torpes, hermosas, sobre cómo cuidar una vida que todavía era más
-              pregunta que certeza.
+              Veníamos de un golpe grave y nos aferrábamos a una relación que
+              ya se estaba volviendo demasiado difícil. La reconciliación número
+              trescientos cuarenta y cinco, quizá. Pero en ese momento todavía
+              hablábamos como si cambiar fuera una puerta que podíamos abrir si
+              encontrábamos la llave correcta.
             </p>
             <p>
-              Todo pasaba en un momento raro. Ella llevaba poco tiempo casada y
-              alrededor suyo había una familia intentando decidir qué era lo
-              correcto, qué convenía, qué debía hacerse. Como si una noticia así
-              pudiera resolverse entre voces ajenas.
+              Decíamos que había que hablar más. Que si nos queríamos tanto,
+              algo tenía que poder acomodarse. Lo decíamos con seriedad, con
+              cansancio, con esa esperanza torpe de quienes ya se lastimaron
+              demasiado pero todavía no saben soltar.
             </p>
             <p>
-              Yo no estaba en el centro de esa casa. Tampoco tenía un lugar
-              claro desde donde hablar. Pero igual estaba. Del otro lado del
-              teléfono, de los mensajes, de las promesas de que de alguna forma
-              íbamos a poder con eso.
+              Entonces apareció esa foto. Mi nombre en tu pecho y un pato al
+              lado. El pato no era un detalle menor: a ella de chiquita y a mí
+              nos gustaban los patos. A mí también me gustaba pelear con los gansos,
+              que es una forma bastante ridícula de guardar ternura.
             </p>
             <p>
-              Después empezaron las peleas, las súplicas, las frases dichas con
-              miedo. No recuerdo el orden exacto. Recuerdo la sensación de estar
-              intentando sostener algo que se nos iba de las manos mientras
-              todos alrededor empujaban hacia una decisión.
+              Después de eso pensé que quizá podíamos con todo. Nos duró poco,
+              como tantas cosas nuestras. Pero durante un rato esa marca pareció
+              decir que todavía había algo dispuesto a quedarse.
             </p>
           </motion.article>
         </div>
@@ -151,7 +149,7 @@ export default function LaLlamadaView() {
       <section className="border-y border-[#C8A27A]/10 px-6 py-20">
         <div className="mx-auto max-w-6xl">
           <p className="mb-10 text-sm uppercase tracking-[0.25em] text-[#C8A27A]">
-            Fragmentos
+            Restos
           </p>
 
           <div className="grid gap-6 md:grid-cols-2">
@@ -188,32 +186,28 @@ export default function LaLlamadaView() {
           className="mx-auto max-w-3xl text-center"
         >
           <p className="text-3xl font-light leading-relaxed text-[#C8A27A] md:text-5xl">
-            “Ya no está.”
+            Cuando me mostraste que lo habías tapado, sonreí.
           </p>
           <p className="mt-8 text-xl leading-8 text-[#DDD0C2]">
-            No recuerdo cuánto tiempo pasó después de escuchar eso. Recuerdo
-            prender un cigarrillo, volver a casa y encerrarme en la habitación
-            de mis padres.
+            Dije que estaba bien, que era normal, que cada uno tenía derecho a
+            seguir. Y creo que era verdad. Pero también era verdad otra cosa:
+            alguna parte de mí todavía recordaba la foto original.
           </p>
           <p className="mt-6 text-lg leading-8 text-[#DDD0C2]">
-            Creo que fue la primera vez que nuestro destello empezó a perder un
-            poco de su brillo.
+            Con el tiempo entendí algo más incómodo: cuando más me quisiste, no
+            pude verlo. Y cuando te alejaste fue cuando más me aferré.
+          </p>
+          <p className="mt-6 text-lg leading-8 text-[#DDD0C2]">
+            No todas las marcas de mis brazos llevaban tu nombre. Pero muchas
+            nacieron en noches donde yo no sabía cómo quedarme conmigo.
           </p>
 
-          <div className="mt-12 flex flex-wrap justify-center gap-4">
-            <Link
-              href="/destello/dame-unos-dias"
-              className="inline-block border border-[#C8A27A]/40 px-7 py-4 text-sm uppercase tracking-[0.18em] text-[#F5E9DC] transition-all duration-500 hover:bg-[#C8A27A] hover:text-black"
-            >
-              Leer Dame unos días
-            </Link>
-            <Link
-              href="/explorar"
-              className="inline-block border border-[#C8A27A]/20 px-7 py-4 text-sm uppercase tracking-[0.18em] text-[#DDD0C2] transition-all duration-500 hover:border-[#C8A27A]/50 hover:text-[#F5E9DC]"
-            >
-              Volver a explorar
-            </Link>
-          </div>
+          <Link
+            href="/explorar"
+            className="mt-12 inline-block border border-[#C8A27A]/40 px-7 py-4 text-sm uppercase tracking-[0.18em] text-[#F5E9DC] transition-all duration-500 hover:bg-[#C8A27A] hover:text-black"
+          >
+            Volver a explorar
+          </Link>
         </motion.div>
       </section>
     </main>
