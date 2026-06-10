@@ -127,8 +127,8 @@ export default function ElBalconView() {
               Decidí acompañarte a tu casa y, por razones que todavía pertenecen
               al desorden de esa época, terminaste invitándome a quedarme a
               dormir. Yo no esperaba nada. Eras la ex de un amigo, estabas
-              esperando a tu bebé, y había demasiadas cosas alrededor como para
-              imaginar otra posibilidad.
+              atravesando una vida que ya venía con demasiadas cosas encima, y
+              había demasiado alrededor como para imaginar otra posibilidad.
             </p>
             <p>
               En el viaje te quedaste medio dormida. Cuando despertaste, estábamos
