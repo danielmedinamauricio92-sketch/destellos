@@ -95,10 +95,11 @@ export const destellos: DestelloEntry[] = [
     title: "El balc\u00f3n",
     image: "/balcon.png",
     route: "/destello/el-balcon",
-    kind: "placeholder",
-    status: "seed",
-    emotions: ["memoria", "silencio"],
-    summary: "Un lugar quieto desde donde algo se mira de otra manera.",
+    kind: "longform",
+    status: "published",
+    emotions: ["amor", "memoria", "tiempo", "silencio"],
+    summary:
+      "La noche en que una palabra apareci\u00f3 por accidente y termin\u00f3 nombrando todo lo que vino despu\u00e9s.",
   },
   {
     id: "la-ecografia",

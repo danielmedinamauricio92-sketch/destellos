@@ -1,7 +1,5 @@
-import SeedDestello from "@/components/destellos/SeedDestello";
-import { destellos } from "@/data/destellos";
+import ElBalconView from "@/views/ElBalconView";
 
 export default function ElBalconPage() {
-  const entry = destellos.find((destello) => destello.id === "el-balcon")!;
-  return <SeedDestello entry={entry} />;
+  return <ElBalconView />;
 }
