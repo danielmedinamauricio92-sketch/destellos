@@ -68,7 +68,7 @@ export const destellos: DestelloEntry[] = [
     route: "/destello/frente-al-hospital",
     kind: "longform",
     status: "published",
-    relatedIds: ["la-llamada", "el-tatuaje"],
+    relatedIds: ["la-llamada", "respirar-profundo"],
     emotions: ["perdida", "culpa", "cuerpo", "silencio"],
     summary:
       "Una madrugada afuera de un hospital, cuando no hab\u00eda nada que hacer salvo quedarse cerca.",
@@ -127,10 +127,22 @@ export const destellos: DestelloEntry[] = [
     route: "/destello/el-tatuaje",
     kind: "longform",
     status: "published",
-    relatedIds: ["casa-casa", "frente-al-hospital"],
+    relatedIds: ["casa-casa", "respirar-profundo"],
     emotions: ["amor", "culpa", "memoria", "tiempo", "cuerpo"],
     summary:
       "Una promesa escrita en la piel, un pato, y las marcas que cambiaron de idioma con los a\u00f1os.",
+  },
+  {
+    id: "respirar-profundo",
+    title: "Respirar profundo",
+    image: "/respirar-profundo.png",
+    route: "/destello/respirar-profundo",
+    kind: "longform",
+    status: "published",
+    relatedIds: ["frente-al-hospital", "el-tatuaje"],
+    emotions: ["cuerpo", "silencio", "memoria", "tiempo"],
+    summary:
+      "La noche en que el dolor apareció en el pecho y después aprendió a desaparecer de las placas.",
   },
   {
     id: "la-despedida",
@@ -161,16 +173,6 @@ export const destellos: DestelloEntry[] = [
     status: "seed",
     emotions: ["amor", "culpa", "tiempo"],
     summary: "Una forma de decir tarde lo que no encontr\u00f3 lugar antes.",
-  },
-  {
-    id: "el-regreso",
-    title: "El regreso",
-    image: "/regreso.png",
-    route: "/destello/el-regreso",
-    kind: "placeholder",
-    status: "seed",
-    emotions: ["regreso", "memoria", "tiempo"],
-    summary: "Volver a un lugar y descubrir que uno tampoco vuelve igual.",
   },
   {
     id: "el-viaje",
