@@ -111,16 +111,6 @@ export const destellos: DestelloEntry[] = [
       "La noche en que una palabra apareci\u00f3 por accidente y termin\u00f3 nombrando todo lo que vino despu\u00e9s.",
   },
   {
-    id: "la-ecografia",
-    title: "La ecograf\u00eda",
-    image: "/ecografia.png",
-    route: "/destello/la-ecografia",
-    kind: "placeholder",
-    status: "seed",
-    emotions: ["familia", "perdida", "tiempo"],
-    summary: "Una imagen peque\u00f1a que alguna vez sostuvo un futuro entero.",
-  },
-  {
     id: "el-tatuaje",
     title: "La marca",
     image: "/la-marca.png",
@@ -143,6 +133,18 @@ export const destellos: DestelloEntry[] = [
     emotions: ["cuerpo", "silencio", "memoria", "tiempo"],
     summary:
       "La noche en que el dolor apareció en el pecho y después aprendió a desaparecer de las placas.",
+  },
+  {
+    id: "donde-la-noche-se-encendio",
+    title: "Donde la noche se encendi\u00f3",
+    image: "/donde-la-noche-se-encendio.png",
+    route: "/destello/donde-la-noche-se-encendio",
+    kind: "longform",
+    status: "published",
+    relatedIds: ["el-tatuaje", "respirar-profundo"],
+    emotions: ["culpa", "memoria", "cuerpo", "silencio"],
+    summary:
+      "Una noche de humo, objetos quemados y una olla sosteniendo lo que no encontraba lugar.",
   },
   {
     id: "la-despedida",
