@@ -5,11 +5,29 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   type DestelloEntry,
+  type DestelloEmotion,
   emotionLabels,
 } from "@/data/destellos";
 
 type MemoryArchiveProps = {
   entries: DestelloEntry[];
+};
+
+type EmotionGroup = {
+  emotion: DestelloEmotion;
+  entries: DestelloEntry[];
+};
+
+const emotionDoorCopy: Record<DestelloEmotion, string> = {
+  amor: "Cuando algo todavía conserva una forma de ternura.",
+  culpa: "Lo que sigue pesando aunque nadie vuelva a nombrarlo.",
+  perdida: "Los lugares donde algo se fue, pero dejó una marca.",
+  familia: "Vínculos que aprendieron a existir sin pedir permiso.",
+  memoria: "Escenas pequeñas que vuelven cuando menos se las espera.",
+  regreso: "El impulso raro de volver a tocar una puerta vieja.",
+  silencio: "Lo que no se dijo y aun así siguió ocupando lugar.",
+  tiempo: "Eso que cambia la escena sin pedir explicaciones.",
+  cuerpo: "Cuando lo que dolía encontró otra manera de aparecer.",
 };
 
 export default function MemoryArchive({ entries }: MemoryArchiveProps) {
@@ -50,7 +68,7 @@ export default function MemoryArchive({ entries }: MemoryArchiveProps) {
 function EmotionDoors({
   groups,
 }: {
-  groups: { emotion: DestelloEntry["emotions"][number]; entries: DestelloEntry[] }[];
+  groups: EmotionGroup[];
 }) {
   if (!groups.length) {
     return null;
@@ -63,22 +81,17 @@ function EmotionDoors({
       </p>
 
       <div className="grid gap-px overflow-hidden border border-[#C8A27A]/10 bg-[#C8A27A]/10 md:grid-cols-2 lg:grid-cols-4">
-        {groups.map(({ emotion, entries }) => (
+        {groups.map(({ emotion }) => (
           <Link
             key={emotion}
             href={`#emocion-${emotion}`}
             className="group bg-[#0B0908] p-5 transition-colors duration-500 hover:bg-[#151210]"
           >
-            <div className="flex items-start justify-between gap-4">
-              <span className="text-sm uppercase tracking-[0.18em] text-[#C8A27A]">
-                {emotionLabels[emotion]}
-              </span>
-              <span className="text-xs text-[#C8A27A]/55">
-                {entries.length.toString().padStart(2, "0")}
-              </span>
-            </div>
+            <span className="text-sm uppercase tracking-[0.18em] text-[#C8A27A]">
+              {emotionLabels[emotion]}
+            </span>
             <p className="mt-5 line-clamp-2 min-h-12 text-sm leading-6 text-[#DDD0C2]/78">
-              {entries[0]?.summary}
+              {emotionDoorCopy[emotion]}
             </p>
           </Link>
         ))}
@@ -198,7 +211,7 @@ function ArchiveCard({
 function EmotionRooms({
   groups,
 }: {
-  groups: { emotion: DestelloEntry["emotions"][number]; entries: DestelloEntry[] }[];
+  groups: EmotionGroup[];
 }) {
   if (!groups.length) {
     return null;
@@ -228,8 +241,8 @@ function EmotionRooms({
                 <p className="text-sm uppercase tracking-[0.2em] text-[#C8A27A]">
                   {emotionLabels[emotion]}
                 </p>
-                <p className="mt-2 text-xs text-[#C8A27A]/55">
-                  {entries.length} {entries.length === 1 ? "destello" : "destellos"}
+                <p className="mt-3 max-w-40 text-sm leading-6 text-[#DDD0C2]/65">
+                  {emotionDoorCopy[emotion]}
                 </p>
               </div>
 
