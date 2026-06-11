@@ -205,9 +205,10 @@ export default function ElBalconView() {
             natural que cada uno siguiera con su vida.
           </p>
           <p className="mt-6 text-lg leading-8 text-[#DDD0C2]">
-            Destellos quedó ahí: sin balcón, sin promesa, sin reclamo. Solo como
-            una palabra que nació de una luz y terminó aprendiendo a nombrar
-            muchas otras cosas.
+            Destellos quedó ahí.
+          </p>
+          <p className="mt-6 text-lg leading-8 text-[#DDD0C2]">
+            La palabra sobrevivió al balcón. A la luz. Y a nosotros.
           </p>
 
           <RelatedDestellos ids={["la-linea-invisible", "dame-unos-dias"]} />
