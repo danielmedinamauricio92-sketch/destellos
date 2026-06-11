@@ -22,9 +22,14 @@ const fragments = [
       "Esperamos varias horas. Nadie nos atendió. Yo tenía que trabajar y preferí convencerme de que no era tan grave.",
   },
   {
-    title: "La placa",
+    title: "La operación",
     text:
-      "Después vinieron las preguntas, los estudios, la posibilidad de una operación, palabras grandes dichas en consultorios fríos.",
+      "Después vinieron las preguntas, los estudios y una palabra que no parecía hecha para nosotros: operación.",
+  },
+  {
+    title: "El parque",
+    text:
+      "Salimos de escuchar eso y fuimos a mirar patos, una tortuga, libretas y lapiceras.",
   },
 ];
 
@@ -60,8 +65,7 @@ export default function RespirarProfundoView() {
           <div className="mt-8 h-px w-20 bg-[#C8A27A]/40" />
 
           <p className="mt-8 max-w-2xl text-xl leading-relaxed text-[#DDD0C2] md:text-2xl">
-            A veces el cuerpo encuentra una forma de decir lo que la cabeza
-            todavía no puede ordenar.
+            Nos dijeron que había que operar. Después fuimos a mirar patos.
           </p>
         </motion.div>
       </section>
@@ -75,7 +79,7 @@ export default function RespirarProfundoView() {
           className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[220px_1fr]"
         >
           <p className="text-sm uppercase tracking-[0.25em] text-[#C8A27A]">
-            El cuerpo
+            La sombra
           </p>
 
           <div className="max-w-3xl space-y-6 text-xl leading-9 text-[#DDD0C2] md:text-2xl md:leading-10">
@@ -87,6 +91,10 @@ export default function RespirarProfundoView() {
             <p>
               Esa noche parecía normal. Hasta que el dolor apareció en el pecho
               y por unos minutos la habitación dejó de saber qué hacer conmigo.
+            </p>
+            <p>
+              Después llegaron los estudios. Después una palabra que no parecía
+              hecha para nosotros: operación.
             </p>
           </div>
         </motion.div>
@@ -143,10 +151,19 @@ export default function RespirarProfundoView() {
               hacerlo más real.
             </p>
             <p>
-              Las semanas siguieron y el dolor también. Empecé a jugar con él:
-              respiraba más profundo, movía el cuerpo de cierta manera, como
-              quien toca una puerta para ver si alguien todavía está del otro
-              lado.
+              Las semanas siguieron y el dolor también. A veces respiraba hondo
+              solo para comprobar si seguía ahí.
+            </p>
+            <p>
+              Después llegaron los estudios. Las placas. Las preguntas. La gente
+              juntándose alrededor de una imagen que yo todavía intentaba mirar
+              como si fuera de otra persona.
+            </p>
+            <p>
+              Al principio hablaron de operación, de tratamiento, de cosas que
+              parecían demasiado grandes para entrar en una tarde cualquiera. Yo
+              seguí trabajando. Seguí fumando. Seguí haciendo de cuenta que el
+              cuerpo podía esperar.
             </p>
           </motion.article>
         </div>
@@ -195,16 +212,29 @@ export default function RespirarProfundoView() {
             Nos dijeron que había que operar.
           </p>
           <p className="mt-8 text-xl leading-8 text-[#DDD0C2]">
-            Salimos de la consulta y fuimos al parque de siempre. Miramos patos,
-            una tortuga, libretas, lapiceras. Para mis viejos el mundo se había
-            derrumbado. Para nosotros, por alguna razón, seguía igual.
+            Salimos de la consulta y fuimos al parque de siempre, como si la
+            tarde todavía pudiera ser una tarde cualquiera.
           </p>
           <p className="mt-6 text-lg leading-8 text-[#DDD0C2]">
-            Después vino otro estudio.
+            Había patos. Una tortuga. Después una librería, libretas,
+            lapiceras. Todo lo que no se parecía a una operación.
           </p>
           <p className="mt-6 text-lg leading-8 text-[#DDD0C2]">
-            Solo sé que un día la imagen volvió limpia, como si el cuerpo
-            hubiera decidido callarse.
+            Para mis viejos el mundo se había derrumbado. Para nosotros, por
+            alguna razón, seguía igual.
+          </p>
+          <p className="mt-6 text-lg leading-8 text-[#DDD0C2]">
+            Después vino otro estudio. La imagen volvió limpia.
+          </p>
+          <p className="mt-6 text-lg leading-8 text-[#DDD0C2]">
+            Pero si pienso en esa parte de la historia, no vuelvo a la placa.
+            Vuelvo al parque.
+          </p>
+          <p className="mt-6 text-lg leading-8 text-[#DDD0C2]">
+            A los patos.
+          </p>
+          <p className="mt-6 text-lg leading-8 text-[#DDD0C2]">
+            A esa forma extraña que tuvimos de seguir caminando como si nada.
           </p>
 
           <RelatedDestellos ids={["frente-al-hospital", "el-tatuaje"]} />
