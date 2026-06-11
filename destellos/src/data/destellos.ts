@@ -18,6 +18,8 @@ export type DestelloEntry = {
   route: string;
   kind: DestelloKind;
   status: "published" | "seed";
+  role?: "origin";
+  relatedIds?: string[];
   emotions: DestelloEmotion[];
   summary: string;
 };
@@ -42,6 +44,7 @@ export const destellos: DestelloEntry[] = [
     route: "/destello/la-linea-invisible",
     kind: "longform",
     status: "published",
+    relatedIds: ["el-balcon", "dame-unos-dias"],
     emotions: ["amor", "culpa", "memoria", "tiempo"],
     summary:
       "El punto donde todav\u00eda no hab\u00eda pasado nada, pero algo ya hab\u00eda empezado.",
@@ -53,6 +56,7 @@ export const destellos: DestelloEntry[] = [
     route: "/destello/la-llamada",
     kind: "brief",
     status: "published",
+    relatedIds: ["dame-unos-dias", "frente-al-hospital"],
     emotions: ["perdida", "familia", "silencio"],
     summary:
       "Una llamada que llega con planes, miedo y una decisi\u00f3n empujada por demasiadas voces.",
@@ -64,6 +68,7 @@ export const destellos: DestelloEntry[] = [
     route: "/destello/frente-al-hospital",
     kind: "longform",
     status: "published",
+    relatedIds: ["la-llamada", "el-tatuaje"],
     emotions: ["perdida", "culpa", "cuerpo", "silencio"],
     summary:
       "Una madrugada afuera de un hospital, cuando no hab\u00eda nada que hacer salvo quedarse cerca.",
@@ -75,6 +80,7 @@ export const destellos: DestelloEntry[] = [
     route: "/destello/casa-casa",
     kind: "longform",
     status: "published",
+    relatedIds: ["el-tatuaje", "el-balcon"],
     emotions: ["familia", "amor", "memoria", "tiempo"],
     summary:
       "Los v\u00ednculos que nadie sabe nombrar del todo, pero que igual aprenden la forma de una familia.",
@@ -86,6 +92,7 @@ export const destellos: DestelloEntry[] = [
     route: "/destello/dame-unos-dias",
     kind: "longform",
     status: "published",
+    relatedIds: ["la-llamada", "la-linea-invisible"],
     emotions: ["amor", "culpa", "memoria", "tiempo", "silencio"],
     summary:
       "La noche en que una decisi\u00f3n firme empez\u00f3 a caerse en un parque enorme.",
@@ -97,6 +104,8 @@ export const destellos: DestelloEntry[] = [
     route: "/destello/el-balcon",
     kind: "longform",
     status: "published",
+    role: "origin",
+    relatedIds: ["la-linea-invisible", "dame-unos-dias"],
     emotions: ["amor", "memoria", "tiempo", "silencio"],
     summary:
       "La noche en que una palabra apareci\u00f3 por accidente y termin\u00f3 nombrando todo lo que vino despu\u00e9s.",
@@ -118,6 +127,7 @@ export const destellos: DestelloEntry[] = [
     route: "/destello/el-tatuaje",
     kind: "longform",
     status: "published",
+    relatedIds: ["casa-casa", "frente-al-hospital"],
     emotions: ["amor", "culpa", "memoria", "tiempo", "cuerpo"],
     summary:
       "Una promesa escrita en la piel, un pato, y las marcas que cambiaron de idioma con los a\u00f1os.",

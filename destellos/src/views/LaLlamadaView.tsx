@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import RelatedDestellos from "@/components/destellos/RelatedDestellos";
 
 const fragments = [
   {
@@ -200,20 +201,14 @@ export default function LaLlamadaView() {
             poco de su brillo.
           </p>
 
-          <div className="mt-12 flex flex-wrap justify-center gap-4">
-            <Link
-              href="/destello/dame-unos-dias"
-              className="inline-block border border-[#C8A27A]/40 px-7 py-4 text-sm uppercase tracking-[0.18em] text-[#F5E9DC] transition-all duration-500 hover:bg-[#C8A27A] hover:text-black"
-            >
-              Leer Dame unos días
-            </Link>
-            <Link
-              href="/explorar"
-              className="inline-block border border-[#C8A27A]/20 px-7 py-4 text-sm uppercase tracking-[0.18em] text-[#DDD0C2] transition-all duration-500 hover:border-[#C8A27A]/50 hover:text-[#F5E9DC]"
-            >
-              Volver a explorar
-            </Link>
-          </div>
+          <RelatedDestellos ids={["dame-unos-dias", "frente-al-hospital"]} />
+
+          <Link
+            href="/explorar"
+            className="mt-12 inline-block border border-[#C8A27A]/40 px-7 py-4 text-sm uppercase tracking-[0.18em] text-[#F5E9DC] transition-all duration-500 hover:bg-[#C8A27A] hover:text-black"
+          >
+            Volver al archivo
+          </Link>
         </motion.div>
       </section>
     </main>

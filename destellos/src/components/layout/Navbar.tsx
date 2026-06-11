@@ -15,7 +15,7 @@ export default function Navbar() {
             href="/explorar"
             className="text-sm uppercase tracking-[0.15em] text-[#DDD0C2] transition hover:text-[#C8A27A]"
           >
-            Explorar
+            Archivo
           </Link>
 
           <Link

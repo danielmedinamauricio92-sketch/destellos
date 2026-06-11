@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import RelatedDestellos from "@/components/destellos/RelatedDestellos";
 
 const fragments = [
   {
@@ -209,11 +210,13 @@ export default function ElBalconView() {
             muchas otras cosas.
           </p>
 
+          <RelatedDestellos ids={["la-linea-invisible", "dame-unos-dias"]} />
+
           <Link
             href="/explorar"
             className="mt-12 inline-block border border-[#C8A27A]/40 px-7 py-4 text-sm uppercase tracking-[0.18em] text-[#F5E9DC] transition-all duration-500 hover:bg-[#C8A27A] hover:text-black"
           >
-            Volver a explorar
+            Volver al archivo
           </Link>
         </motion.div>
       </section>

@@ -217,6 +217,7 @@ export default function FrenteAlHospitalView() {
       emotionalMap={emotionalMap}
       images={sideImages}
       closing={closing}
+      relatedIds={["la-llamada", "el-tatuaje"]}
     />
   );
 }

@@ -15,7 +15,7 @@ export default function ExplorarView() {
           className="mb-16"
         >
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#C8A27A]">
-            Explorar
+            Archivo
           </p>
 
           <h1 className="mb-6 text-5xl font-light tracking-[0.18em] md:text-7xl">

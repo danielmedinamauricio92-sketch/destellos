@@ -236,6 +236,7 @@ export default function LaLineaInvisibleView() {
         title: "La culpa no siempre aparece cuando pasa algo.",
         text: "A veces aparece antes, como si una parte de uno ya supiera hacia d\u00f3nde estaba caminando.",
       }}
+      relatedIds={["el-balcon", "dame-unos-dias"]}
     />
   );
 }
