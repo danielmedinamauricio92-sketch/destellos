@@ -22,14 +22,14 @@ const fragments = [
       "Esperamos varias horas. Nadie nos atendió. Yo tenía que trabajar y preferí convencerme de que no era tan grave.",
   },
   {
-    title: "La operación",
+    title: "La consulta",
     text:
-      "Después vinieron las preguntas, los estudios y una palabra que no parecía hecha para nosotros: operación.",
+      "Después vinieron las preguntas, los estudios y una frase demasiado grande para una tarde cualquiera.",
   },
   {
     title: "El parque",
     text:
-      "Salimos de escuchar eso y fuimos a mirar patos, una tortuga, libretas y lapiceras.",
+      "Salimos de escuchar eso y fuimos a mirar patos. También había una tortuga. Después, libretas y lapiceras.",
   },
 ];
 
@@ -94,7 +94,7 @@ export default function RespirarProfundoView() {
             </p>
             <p>
               Después llegaron los estudios. Después una palabra que no parecía
-              hecha para nosotros: operación.
+              hecha para nosotros.
             </p>
           </div>
         </motion.div>
@@ -160,10 +160,10 @@ export default function RespirarProfundoView() {
               como si fuera de otra persona.
             </p>
             <p>
-              Al principio hablaron de operación, de tratamiento, de cosas que
-              parecían demasiado grandes para entrar en una tarde cualquiera. Yo
-              seguí trabajando. Seguí fumando. Seguí haciendo de cuenta que el
-              cuerpo podía esperar.
+              Al principio hablaron de tratamientos, de especialistas, de cosas
+              que parecían demasiado grandes para entrar en una tarde
+              cualquiera. Yo seguí trabajando. Seguí fumando. Seguí haciendo de
+              cuenta que el cuerpo podía esperar.
             </p>
           </motion.article>
         </div>
@@ -209,15 +209,15 @@ export default function RespirarProfundoView() {
           className="mx-auto max-w-3xl text-center"
         >
           <p className="text-3xl font-light leading-relaxed text-[#C8A27A] md:text-5xl">
-            Nos dijeron que había que operar.
+            Salimos de la consulta.
           </p>
           <p className="mt-8 text-xl leading-8 text-[#DDD0C2]">
-            Salimos de la consulta y fuimos al parque de siempre, como si la
-            tarde todavía pudiera ser una tarde cualquiera.
+            Fuimos al parque de siempre, como si la tarde todavía pudiera ser
+            una tarde cualquiera.
           </p>
           <p className="mt-6 text-lg leading-8 text-[#DDD0C2]">
             Había patos. Una tortuga. Después una librería, libretas,
-            lapiceras. Todo lo que no se parecía a una operación.
+            lapiceras. Todo lo que no se parecía a una sala de espera.
           </p>
           <p className="mt-6 text-lg leading-8 text-[#DDD0C2]">
             Para mis viejos el mundo se había derrumbado. Para nosotros, por
