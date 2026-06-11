@@ -31,6 +31,11 @@ const fragments = [
     text:
       "Salimos de escuchar eso y fuimos a mirar patos. También había una tortuga. Después, libretas y lapiceras.",
   },
+  {
+    title: "La tarde",
+    text:
+      "Nada se había arreglado. Igual caminamos como si todavía hubiera una forma sencilla de seguir.",
+  },
 ];
 
 export default function RespirarProfundoView() {
@@ -79,7 +84,7 @@ export default function RespirarProfundoView() {
           className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[220px_1fr]"
         >
           <p className="text-sm uppercase tracking-[0.25em] text-[#C8A27A]">
-            La sombra
+            La tarde
           </p>
 
           <div className="max-w-3xl space-y-6 text-xl leading-9 text-[#DDD0C2] md:text-2xl md:leading-10">
@@ -95,6 +100,9 @@ export default function RespirarProfundoView() {
             <p>
               Después llegaron los estudios. Después una palabra que no parecía
               hecha para nosotros.
+            </p>
+            <p>
+              Y después, por alguna razón, el parque.
             </p>
           </div>
         </motion.div>
@@ -151,8 +159,8 @@ export default function RespirarProfundoView() {
               hacerlo más real.
             </p>
             <p>
-              Las semanas siguieron y el dolor también. A veces respiraba hondo
-              solo para comprobar si seguía ahí.
+              Las semanas siguieron y el dolor también. A veces respiraba hondo,
+              apenas para comprobar si seguía ahí.
             </p>
             <p>
               Después llegaron los estudios. Las placas. Las preguntas. La gente
@@ -164,6 +172,9 @@ export default function RespirarProfundoView() {
               que parecían demasiado grandes para entrar en una tarde
               cualquiera. Yo seguí trabajando. Seguí fumando. Seguí haciendo de
               cuenta que el cuerpo podía esperar.
+            </p>
+            <p>
+              Hasta que una consulta nos dejó una frase pesada entre las manos.
             </p>
           </motion.article>
         </div>
@@ -216,25 +227,37 @@ export default function RespirarProfundoView() {
             una tarde cualquiera.
           </p>
           <p className="mt-6 text-lg leading-8 text-[#DDD0C2]">
-            Había patos. Una tortuga. Después una librería, libretas,
-            lapiceras. Todo lo que no se parecía a una sala de espera.
+            Había patos.
+          </p>
+          <p className="mt-6 text-lg leading-8 text-[#DDD0C2]">
+            Una tortuga cerca del agua.
+          </p>
+          <p className="mt-6 text-lg leading-8 text-[#DDD0C2]">
+            El ruido normal de la gente pasando. Una tarde que no sabía nada de
+            nosotros.
+          </p>
+          <p className="mt-6 text-lg leading-8 text-[#DDD0C2]">
+            Después una librería. Libretas. Lapiceras. Cosas pequeñas, fáciles
+            de mirar, como si elegir una tinta o tocar una tapa pudiera
+            devolverle tamaño humano a lo que acabábamos de escuchar.
           </p>
           <p className="mt-6 text-lg leading-8 text-[#DDD0C2]">
             Para mis viejos el mundo se había derrumbado. Para nosotros, por
             alguna razón, seguía igual.
           </p>
           <p className="mt-6 text-lg leading-8 text-[#DDD0C2]">
-            Después vino otro estudio. La imagen volvió limpia.
+            Después vino otro estudio. La imagen volvió limpia. Pero eso no es
+            lo que más recuerdo.
           </p>
           <p className="mt-6 text-lg leading-8 text-[#DDD0C2]">
-            Pero si pienso en esa parte de la historia, no vuelvo a la placa.
-            Vuelvo al parque.
+            Si pienso en esa parte de la historia, no vuelvo a la placa.
           </p>
           <p className="mt-6 text-lg leading-8 text-[#DDD0C2]">
-            A los patos.
+            Vuelvo a los patos.
           </p>
           <p className="mt-6 text-lg leading-8 text-[#DDD0C2]">
-            A esa forma extraña que tuvimos de seguir caminando como si nada.
+            A esa forma extraña que tuvimos de seguir caminando cuando todo
+            parecía pedirnos que nos quedáramos quietos.
           </p>
 
           <RelatedDestellos ids={["frente-al-hospital", "el-tatuaje"]} />
