@@ -18,13 +18,13 @@ export default function ExplorarView() {
             Archivo
           </p>
 
-          <h1 className="mb-6 text-5xl font-light tracking-[0.18em] md:text-7xl">
-            ARCHIVO
+          <h1 className="mb-6 max-w-4xl text-5xl font-light leading-tight tracking-[0.12em] md:text-7xl">
+            Entrar por recuerdos
           </h1>
 
           <p className="max-w-2xl text-lg leading-8 text-[#DDD0C2]">
             {
-              "No todos los recuerdos llegan en orden. Algunos se agrupan por culpa, otros por amor, otros por esa clase de silencio que tarda a\u00f1os en decir algo."
+              "No todos los recuerdos llegan en orden. Algunos se encuentran por culpa, otros por amor, otros por esa clase de silencio que tarda a\u00f1os en decir algo."
             }
           </p>
         </motion.div>

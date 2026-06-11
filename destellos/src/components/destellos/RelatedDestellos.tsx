@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { destellos } from "@/data/destellos";
+import { destellos, emotionLabels } from "@/data/destellos";
 
 type RelatedDestellosProps = {
   ids: string[];
@@ -20,9 +20,15 @@ export default function RelatedDestellos({ ids }: RelatedDestellosProps) {
 
   return (
     <div className="mx-auto mt-14 max-w-4xl text-left">
-      <p className="mb-5 text-center text-sm uppercase tracking-[0.25em] text-[#C8A27A]">
-        Cerca de este destello
-      </p>
+      <div className="mb-6 text-center">
+        <p className="text-sm uppercase tracking-[0.25em] text-[#C8A27A]">
+          Cerca de este destello
+        </p>
+        <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-[#DDD0C2]/70">
+          No por orden. Por una emoción parecida, una marca cercana, una forma
+          de seguir mirando.
+        </p>
+      </div>
 
       <div className="grid gap-4 md:grid-cols-2">
         {related.map((destello, index) => (
@@ -56,6 +62,11 @@ export default function RelatedDestellos({ ids }: RelatedDestellosProps) {
                 </h3>
                 <p className="mt-3 line-clamp-2 text-sm leading-6 text-[#DDD0C2]">
                   {destello.summary}
+                </p>
+                <p className="mt-4 text-xs leading-5 text-[#C8A27A]/70">
+                  {destello.emotions
+                    .map((emotion) => emotionLabels[emotion])
+                    .join(" · ")}
                 </p>
               </div>
             </Link>

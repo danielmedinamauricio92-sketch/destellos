@@ -18,19 +18,16 @@ export default function MemoryArchive({ entries }: MemoryArchiveProps) {
   );
   const published = entries.filter((entry) => entry.status === "published");
   const seeds = entries.filter((entry) => entry.status === "seed");
+  const emotionGroups = emotions
+    .map((emotion) => ({
+      emotion,
+      entries: published.filter((entry) => entry.emotions.includes(emotion)),
+    }))
+    .filter((group) => group.entries.length);
 
   return (
     <section className="space-y-16">
-      <div className="flex flex-wrap gap-3">
-        {emotions.map((emotion) => (
-          <span
-            key={emotion}
-            className="border border-[#C8A27A]/20 px-4 py-2 text-xs uppercase tracking-[0.16em] text-[#C8A27A]"
-          >
-            {emotionLabels[emotion]}
-          </span>
-        ))}
-      </div>
+      <EmotionDoors groups={emotionGroups} />
 
       <ArchiveSection
         title="Publicados"
@@ -44,7 +41,49 @@ export default function MemoryArchive({ entries }: MemoryArchiveProps) {
         entries={seeds}
         muted
       />
+
+      <EmotionRooms groups={emotionGroups} />
     </section>
+  );
+}
+
+function EmotionDoors({
+  groups,
+}: {
+  groups: { emotion: DestelloEntry["emotions"][number]; entries: DestelloEntry[] }[];
+}) {
+  if (!groups.length) {
+    return null;
+  }
+
+  return (
+    <div className="border-y border-[#C8A27A]/10 py-10">
+      <p className="mb-6 text-sm uppercase tracking-[0.25em] text-[#C8A27A]">
+        Puertas de entrada
+      </p>
+
+      <div className="grid gap-px overflow-hidden border border-[#C8A27A]/10 bg-[#C8A27A]/10 md:grid-cols-2 lg:grid-cols-4">
+        {groups.map(({ emotion, entries }) => (
+          <Link
+            key={emotion}
+            href={`#emocion-${emotion}`}
+            className="group bg-[#0B0908] p-5 transition-colors duration-500 hover:bg-[#151210]"
+          >
+            <div className="flex items-start justify-between gap-4">
+              <span className="text-sm uppercase tracking-[0.18em] text-[#C8A27A]">
+                {emotionLabels[emotion]}
+              </span>
+              <span className="text-xs text-[#C8A27A]/55">
+                {entries.length.toString().padStart(2, "0")}
+              </span>
+            </div>
+            <p className="mt-5 line-clamp-2 min-h-12 text-sm leading-6 text-[#DDD0C2]/78">
+              {entries[0]?.summary}
+            </p>
+          </Link>
+        ))}
+      </div>
+    </div>
   );
 }
 
@@ -125,7 +164,7 @@ function ArchiveCard({
               className="object-cover transition-transform duration-700 group-hover:scale-110"
             />
 
-            <div className="absolute inset-0 bg-black/35 transition-all duration-500 group-hover:bg-black/20" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/65 via-black/25 to-black/10 transition-all duration-500 group-hover:from-black/50" />
             <span className="absolute left-4 top-4 bg-[#151210]/80 px-4 py-2 text-xs uppercase tracking-[0.18em] text-[#C8A27A]">
               {label}
             </span>
@@ -146,16 +185,79 @@ function ArchiveCard({
               {entry.summary}
             </p>
 
-            <div className="mt-6 flex min-h-10 flex-wrap items-end gap-2">
-              {entry.emotions.map((emotion) => (
-                <span key={emotion} className="text-xs text-[#C8A27A]/80">
-                  {emotionLabels[emotion]}
-                </span>
-              ))}
+            <div className="mt-6 flex min-h-10 items-end text-xs leading-5 text-[#C8A27A]/80">
+              {entry.emotions.map((emotion) => emotionLabels[emotion]).join(" · ")}
             </div>
           </div>
         </article>
       </Link>
     </motion.div>
+  );
+}
+
+function EmotionRooms({
+  groups,
+}: {
+  groups: { emotion: DestelloEntry["emotions"][number]; entries: DestelloEntry[] }[];
+}) {
+  if (!groups.length) {
+    return null;
+  }
+
+  return (
+    <div className="space-y-8">
+      <div className="max-w-3xl">
+        <p className="text-sm uppercase tracking-[0.25em] text-[#C8A27A]">
+          Por emoción
+        </p>
+        <p className="mt-4 leading-7 text-[#DDD0C2]">
+          Algunas historias no se encuentran por fecha. Se encuentran por la
+          forma en que todavía pesan.
+        </p>
+      </div>
+
+      <div className="space-y-6">
+        {groups.map(({ emotion, entries }) => (
+          <section
+            key={emotion}
+            id={`emocion-${emotion}`}
+            className="scroll-mt-28 border-t border-[#C8A27A]/10 pt-6"
+          >
+            <div className="grid gap-5 md:grid-cols-[180px_1fr]">
+              <div>
+                <p className="text-sm uppercase tracking-[0.2em] text-[#C8A27A]">
+                  {emotionLabels[emotion]}
+                </p>
+                <p className="mt-2 text-xs text-[#C8A27A]/55">
+                  {entries.length} {entries.length === 1 ? "destello" : "destellos"}
+                </p>
+              </div>
+
+              <div className="grid gap-3 md:grid-cols-2">
+                {entries.slice(0, 4).map((entry) => (
+                  <Link
+                    key={entry.id}
+                    href={entry.route}
+                    className="group border border-[#C8A27A]/10 bg-[#151210]/50 p-5 transition-all duration-500 hover:border-[#C8A27A]/45 hover:bg-[#151210]"
+                  >
+                    <div className="flex items-start justify-between gap-4">
+                      <h3 className="text-xl font-light text-[#F5E9DC] transition-colors duration-500 group-hover:text-[#C8A27A]">
+                        {entry.title}
+                      </h3>
+                      <span className="text-sm text-[#C8A27A] transition-transform duration-500 group-hover:translate-x-1">
+                        {"\u2192"}
+                      </span>
+                    </div>
+                    <p className="mt-3 line-clamp-2 text-sm leading-6 text-[#DDD0C2]/80">
+                      {entry.summary}
+                    </p>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        ))}
+      </div>
+    </div>
   );
 }
